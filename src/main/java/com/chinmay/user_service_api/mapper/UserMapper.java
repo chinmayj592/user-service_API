@@ -26,6 +26,22 @@ public class UserMapper {
         user.setCurrentAddress(dto.currentAddress());
         user.setPermanentAddress(dto.permanentAddress());
     }
-
+    public static UserResponseDTO toResponse(User user) {
+        return new UserResponseDTO(
+                user.getId(),
+                user.getName(),
+                user.getEmail(),
+                user.getPrimaryMobile(),
+                user.getSecondaryMobile(),
+                user.getAadhaar(),
+                user.getPan(),
+                user.getDateOfBirth(),
+                user.getPlaceOfBirth(),
+                user.getCurrentAddress(),
+                user.getPermanentAddress(),
+                user.getCreatedAt(),
+                user.getUpdatedAt()
+        );
+    }
 
 }
