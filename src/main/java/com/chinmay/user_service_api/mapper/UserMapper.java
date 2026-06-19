@@ -1,10 +1,12 @@
 package com.chinmay.user_service_api.mapper;
 
-import com.chinmay.userservice.dto.UserRequestDTO;
-import com.chinmay.userservice.dto.UserResponseDTO;
-import com.chinmay.userservice.entity.User;
+import com.chinmay.user_service_api.dto.UserRequestDTO;
+import com.chinmay.user_service_api.dto.UserResponseDTO;
+import com.chinmay.user_service_api.entity.User;
 
 public class UserMapper {
+
+
 
     private UserMapper() {}
 
