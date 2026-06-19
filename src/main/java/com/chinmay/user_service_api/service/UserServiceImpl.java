@@ -1,12 +1,12 @@
 package com.chinmay.user_service_api.service;
 
-import com.chinmay.userservice.dto.UserRequestDTO;
-import com.chinmay.userservice.dto.UserResponseDTO;
-import com.chinmay.userservice.entity.User;
-import com.chinmay.userservice.exception.ResourceNotFoundException;
-import com.chinmay.userservice.mapper.UserMapper;
-import com.chinmay.userservice.repository.UserRepository;
-import com.chinmay.userservice.service.UserService;
+import com.chinmay.user_service_api.dto.UserRequestDTO;
+import com.chinmay.user_service_api.dto.UserResponseDTO;
+import com.chinmay.user_service_api.entity.User;
+import com.chinmay.user_service_api.exception.ResourceNotFoundException;
+import com.chinmay.user_service_api.mapper.UserMapper;
+import com.chinmay.user_service_api.repository.UserRepository;
+import com.chinmay.user_service_api.service.UserService;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;

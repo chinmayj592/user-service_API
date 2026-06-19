@@ -1,7 +1,7 @@
 package com.chinmay.user_service_api.service;
 
-import com.chinmay.userservice.dto.UserRequestDTO;
-import com.chinmay.userservice.dto.UserResponseDTO;
+import com.chinmay.user_service_api.dto.UserRequestDTO;
+import com.chinmay.user_service_api.dto.UserResponseDTO;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
