@@ -37,6 +37,8 @@ public class UserController {
         return ResponseEntity.ok(service.getAll(pageable));
     }
 
+
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         service.delete(id);
