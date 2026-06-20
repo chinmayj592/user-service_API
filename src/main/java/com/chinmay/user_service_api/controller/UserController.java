@@ -10,6 +10,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/v1/users")
 public class UserController {
@@ -18,6 +19,11 @@ public class UserController {
 
     public UserController(UserService service) {
         this.service = service;
+    }
+
+    @GetMapping("/test")
+    public ResponseEntity<String> test() {
+        return ResponseEntity.ok("Controller is working!");
     }
 
     @PostMapping
@@ -36,8 +42,6 @@ public class UserController {
     public ResponseEntity<Page<UserResponseDTO>> getAll(Pageable pageable) {
         return ResponseEntity.ok(service.getAll(pageable));
     }
-
-
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {

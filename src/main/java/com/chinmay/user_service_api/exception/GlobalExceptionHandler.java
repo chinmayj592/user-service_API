@@ -31,11 +31,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>> handleValidationErrors(MethodArgumentNotValidException ex) {
         Map<String, String> errors = new HashMap<>();
         StringBuilder message = new StringBuilder("Validation failed: ");
-
+        
         for (FieldError error : ex.getBindingResult().getFieldErrors()) {
             message.append(error.getField()).append(" - ").append(error.getDefaultMessage()).append("; ");
         }
-
+        
         errors.put("message", message.toString());
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
     }
@@ -44,7 +44,7 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>> handleDataIntegrityViolation(org.springframework.dao.DataIntegrityViolationException ex) {
         Map<String, String> error = new HashMap<>();
         String message = ex.getMessage();
-
+        
         if (message.contains("email")) {
             error.put("message", "Email already exists");
         } else if (message.contains("aadhaar")) {
@@ -54,7 +54,7 @@ public class GlobalExceptionHandler {
         } else {
             error.put("message", "Data integrity violation");
         }
-
+        
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(error);
     }
 

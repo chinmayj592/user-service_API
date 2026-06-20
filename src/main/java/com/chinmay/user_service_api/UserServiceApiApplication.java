@@ -3,14 +3,9 @@ package com.chinmay.user_service_api;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.chinmay.user_service_api")
 public class UserServiceApiApplication {
-
     public static void main(String[] args) {
-
         SpringApplication.run(UserServiceApiApplication.class, args);
     }
-
-
-
 }

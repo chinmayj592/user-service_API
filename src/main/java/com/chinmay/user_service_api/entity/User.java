@@ -20,7 +20,8 @@ import java.time.LocalDateTime;
 )
 @Getter
 @Setter
-@SQLDelete(sql = "UPDATE users SET is_deleted = true WHERE id = ?")
+@SQLDelete(sql = "UPDATE users SET is_deleted = true WHERE id = ? AND version = ?")
+
 @Where(clause = "is_deleted = false")
 public class User {
 

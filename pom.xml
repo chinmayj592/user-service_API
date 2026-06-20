@@ -58,18 +58,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Flyway DB Migrations -->
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-core</artifactId>
-        </dependency>
-
-        <!-- Flyway MySQL Support -->
-        <dependency>
-            <groupId>org.flywaydb</groupId>
-            <artifactId>flyway-mysql</artifactId>
-            <scope>runtime</scope>
-        </dependency>
 
 
         <!-- ================= UTIL ================= -->
